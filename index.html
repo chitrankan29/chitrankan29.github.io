@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Montserrat", sans-serif;
+        }
+
+        .w3-row-padding img {
+            margin-bottom: 12px;
+        }
+
+        .bgimg {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url('images/shared image (3).jpg');
+            min-height: 100%;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 600px) {
+            .w3-sidebar {
+                width: 100%;
+            }
+
+            .w3-main {
+                margin-left: 0;
+            }
+
+            .w3-button {
+                width: 100%;
+            }
+        }
+
+        @media (min-width: 601px) {
+            .w3-sidebar {
+                width: 40%;
+            }
+
+            .w3-main {
+                margin-left: 40%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Sidebar with image -->
+    <nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
+        <div class="bgimg"></div>
+    </nav>
+
+    <!-- Hidden Sidebar (reveals when clicked on menu icon)-->
+    <nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge"
+        style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
+        <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright"
+            style="padding:0 12px;">
+            <i class="fa fa-remove"></i>
+        </a>
+        <div class="w3-bar-block w3-center">
+            <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
+            <a href="#portfolio" class="w3-bar-item w3-button w3-text-grey w3-hover-black"
+                onclick="closeNav()">Portfolio</a>
+            <a href="#about" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">About</a>
+            <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black"
+                onclick="closeNav()">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="w3-main w3-padding-large" style="margin-left:40%">
+
+        <!-- Menu icon to open sidebar -->
+        <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;"
+            onclick="openNav()"><i class="fa fa-bars"></i></span>
+
+        <!-- Header -->
+        <header class="w3-container w3-center" style="padding:128px 16px" id="home">
+            <h1 class="w4-jumbo"><b>CHITRANKAN MULAM</b></h1>
+            <p>ARTIST | ART/ICT TEACHER | DESIGNER | MODEL</p>
+            <img src="images/shared image (3).jpg" class="w3-image w3-hide-large w3-hide-small w3-round"
+                style="display:block;width:60%;margin:auto;">
+            <img src="images/shared image (3).jpg" class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000"
+                height="1333">
+            <button class="w3-button w3-light-grey w3-padding-large w3-margin-top">
+                <a href="Chitrankan Mulam CV.pdf" download="Chitrankan Mulam">
+                    <i class="fa fa-download"></i> Download Resume
+            </button></a>
+        </header>
+
+
+        <!-- About Section -->
+        <div class="w3-content w3-justify w3-text-grey w3-padding-20" id="about">
+            <h2>About Me</h2>
+            <hr class="w3-opacity">
+            <p>Seeking a dynamic and challenging career within an organization where I can make meaningful
+                contributions.
+                Aim to leverage my professional expertise and interpersonal skills for mutual growth.
+                Proven ability to excel under pressure with a strong professional attitude.
+                Advanced time management skills and commitment to delivering impactful results.
+                Exceptional classroom management capabilities and acute attention to detail.
+                Strong communication skills driven by a dedication to inspire students to fully embrace their
+                creativity.
+                Emphasis on positive reinforcement, fostering each student's confidence and motivation to succeed.
+                Creating an environment where creativity thrives, and students feel empowered.
+            </p>
+
+
+
+            <!-- Portfolio Section -->
+            <div class="w3-content w3-container w3-padding-64" id="portfolio">
+                <h2 class="w3-padding-16">My Work</h2>
+                <hr>
+                <p class="w3">Here are some of my latest lorem work ipsum tipsum.<br> Click on the images to
+                        make them bigger</p><br>
+
+                <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+                <div class="w3-row-padding w3-center">
+                    <div class="w3-col m6">
+                        <img src="/w3images/p1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                            alt="The mist over the mountains">
+                    </div>
+
+                    <div class="w3-col m6">
+                        <img src="/w3images/p2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                            alt="Coffee beans">
+                    </div>
+
+                    <div class="w3-col m6">
+                        <img src="/w3images/p3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                            alt="Bear closeup">
+                    </div>
+
+                    <div class="w3-col m6">
+                        <img src="/w3images/p4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                            alt="Quiet ocean">
+                    </div>
+                </div>
+
+                <div class="w3-row-padding w3-center w3-section">
+                    <div class="w3-col m6">
+                        <img src="/w3images/p5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                            alt="The mist">
+                    </div>
+
+                    <div class="w3-col m6">
+                        <img src="/w3images/p6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                            alt="My beloved typewriter">
+                    </div>
+
+                    <div class="w3-col m6">
+                        <img src="/w3images/p7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                            alt="Empty ghost train">
+                    </div>
+
+                    <div class="w3-col m6">
+                        <img src="/w3images/p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                            alt="Sailing">
+                    </div>
+                    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">
+                        <a href="photos.html">LOAD MORE</button></a>
+                </div>
+            </div>
+
+            <!-- Modal for full size images on click-->
+            <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+                <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i
+                        class="fa fa-remove"></i></span>
+                <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                    <img id="img01" class="w3-image">
+                    <p id="caption" class="w3-opacity w3-large"></p>
+                </div>
+            </div>
+
+
+
+
+            <!-- Skills Section -->
+            <h2 class="w3-padding-16">My Skills</h2>
+            <hr>
+            <p class="w3-wide">Teaching</p>
+            <div class="w3-light-grey">
+                <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:95%">95%</div>
+            </div>
+            <p class="w3-wide">Photoshop</p>
+            <div class="w3-light-grey">
+                <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:85%">85%</div>
+            </div>
+            <p class="w3-wide">Illustrator</p>
+            <div class="w3-light-grey">
+                <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:80%">80%</div>
+            </div>
+            <p class="w3-wide">Designing</p>
+            <div class="w3-light-grey">
+                <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:85%">85%</div>
+            </div>
+            <p class="w3-wide">Modelling</p>
+            <div class="w3-light-grey">
+                <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:70%">70%</div>
+            </div><br>
+
+            <div class="w3-row w3-center w3-dark-grey w3-padding-16 w3-section">
+                <div class="w3-quarter w3-section">
+                    <span class="w3-xlarge">3</span><br>
+                    Partners
+                </div>
+                <div class="w3-quarter w3-section">
+                    <span class="w3-xlarge">25+</span><br>
+                    Projects Done
+                </div>
+                <div class="w3-quarter w3-section">
+                    <span class="w3-xlarge">73+</span><br>
+                    Happy Students
+                </div>
+                <div class="w3-quarter w3-section">
+                    <span class="w3-xlarge">1</span><br>
+                    Shoot
+                </div>
+            </div>
+
+            <button class="w3-button w3-light-grey w3-padding-large w3-margin-top">
+                <a href="Chitrankan Mulam CV.pdf" download="Chitrankan Mulam">
+                    <i class="fa fa-download"></i> Download Resume
+            </button></a>
+
+
+
+
+
+
+
+
+            <!-- Testimonials -->
+            <h2 class="w3-padding-24">My Reputation</h2>
+            <hr>
+            <img src="/w3images/avatar_smoke.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right"
+                style="width:80px">
+            <p><span class="w3-large w3-text-black w3-margin-right">Chandler Bing.</span> Web Designer.</p>
+            <p>Jane Doe is just awesome. I am so happy to have met her!</p><br>
+
+            <img src="/w3images/bandmember.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right"
+                style="width:80px">
+            <p><span class="w3-large w3-text-black w3-margin-right">Chris Fox.</span> CEO at Mighty Schools.</p>
+            <p>Jane Doe saved us from a web disaster.</p><br>
+
+            <img src="/w3images/avatar_g2.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right"
+                style="width:80px">
+            <p><span class="w3-large w3-text-black w3-margin-right">Rebecca Flex.</span> CEO at Company.</p>
+            <p>No one is better than Jane Doe.</p><br>
+
+            <!-- Grid for pricing tables -->
+            <h2 class="w3-padding-16">My Price</h2>
+            <hr>
+            <div class="w3-row-padding" style="margin:0 -16px">
+                <div class="w3-third w3-margin-bottom">
+                    <ul class="w3-ul w3-center w3-card w3-hover-shadow">
+                        <li class="w3-dark-grey w3-xlarge w3-padding-32">Designing</li>
+                        <li class="w3-padding-16">Logo Design</li>
+                        <li class="w3-padding-16">Brand Design</li>
+                        <li class="w3-padding-16">Personlised Sketch</li>
+                        <li class="w3-padding-16">Canvas Painting</li>
+                        <li class="w3-padding-16">
+                            <!-- <h6>Starting</h6> -->
+                            <h2>INR 2000</h2>
+                            <span class="w3">Per Design *</span>
+                        </li>
+                        <li class="w3-grey w3-padding-24">
+                            <button class="w3-button w3-white w3-padding-large w3-hover-black">Know More</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="w3-third w3-margin-bottom">
+                    <ul class="w3-ul w3-center w3-card w3-hover-shadow">
+                        <li class="w3-dark-grey w3-xlarge w3-padding-32">Art Class</li>
+                        <li class="w3-padding-16">Drawing</li>
+                        <li class="w3-padding-16">Painting</li>
+                        <li class="w3-padding-16">Sketching</li>
+                        <li class="w3-padding-16">DIY Craft</li>
+                        <li class="w3-padding-16">
+                            <h2>INR 3200</h2>
+                            <span class="w3">4 Sessions *</span>
+                        </li>
+                        <li class="w3-grey w3-padding-24">
+                            <button class="w3-button w3-white w3-padding-large w3-hover-black">Know More</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="w3-third w3-margin-bottom">
+                    <ul class="w3-ul w3-center w3-card w3-hover-shadow">
+                        <li class="w3-dark-grey w3-xlarge w3-padding-32">Hobby Art</li>
+                        <li class="w3-padding-16">Pencil Shading</li>
+                        <li class="w3-padding-16">Water Colour</li>
+                        <li class="w3-padding-16">Acrylic</li>
+                        <li class="w3-padding-16">Customize</li>
+                        <li class="w3-padding-16">
+                            <h2>INR 4000</h2>
+                            <span class="w3">4 Sessions *</span>
+                        </li>
+                        <li class="w3-grey w3-padding-24">
+                            <button class="w3-button w3-white w3-padding-large w3-hover-black">Know More</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- <h3 class="w3-padding-16">My Price</h3>
+            <div class="w3-row-padding" style="margin:0 -16px">
+                <div class="w3-half w3-margin-bottom">
+                    <ul class="w3-ul w3-center w3-card w3-hover-shadow">
+                        <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
+                        <li class="w3-padding-16">Web Design</li>
+                        <li class="w3-padding-16">Photography</li>
+                        <li class="w3-padding-16">5GB Storage</li>
+                        <li class="w3-padding-16">Mail Support</li>
+                        <li class="w3-padding-16">
+                            <h2>$ 10</h2>
+                            <span class="w3-opacity">per month</span>
+                        </li>
+                        <li class="w3-light-grey w3-padding-24">
+                            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="w3-half">
+                    <ul class="w3-ul w3-center w3-card w3-hover-shadow">
+                        <li class="w3-black w3-xlarge w3-padding-32">Pro</li>
+                        <li class="w3-padding-16">Web Design</li>
+                        <li class="w3-padding-16">Photography</li>
+                        <li class="w3-padding-16">50GB Storage</li>
+                        <li class="w3-padding-16">Endless Support</li>
+                        <li class="w3-padding-16">
+                            <h2>$ 25</h2>
+                            <span class="w3-opacity">per month</span>
+                        </li>
+                        <li class="w3-light-grey w3-padding-24">
+                            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
+                        </li>
+                    </ul>
+                </div> -->
+
+
+            <!-- End Grid/Pricing tables -->
+        </div>
+
+        <!-- End About Section -->
+
+
+        <!-- Contact Section -->
+        <div class="w3-padding-32 w3-content w3-text-grey" id="contact" style="margin-bottom:64px">
+            <h2>Contact Me</h2>
+            <hr class="w3-opacity">
+            <!-- <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d941.8050405314868!2d73.04975029081105!3d19.229234403382968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7bfd4d4b4c105%3A0x11f9cecd8c54b4b0!2sCasa%20Greenville%20H!5e0!3m2!1sen!2sin!4v1737616156518!5m2!1sen!2sin"
+                width="350" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+
+            <div class="w3-section">
+                <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Mumbai, India</p>
+                <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +91 8779655647</p>
+                <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: chitrankan29@gmail.com</p>
+            </div>
+
+            <!-- Image of location/map -->
+            <!-- <img src="/w3images/map.jpg" class="w3-image w3-greyscale" style="width:100%;margin:32px 0"> -->
+
+            <p>Lets get in touch. Send me a message:</p>
+            <form action="/action_page.php" target="_blank">
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name">
+                </p>
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required
+                        name="Email">
+                </p>
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Subject" required
+                        name="Subject"></p>
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required
+                        name="Message"></p>
+                <p>
+                    <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+                        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+                    </button>
+                </p>
+            </form>
+            <!-- End Contact Section -->
+        </div>
+    </div>
+    <!-- Footer -->
+    <hr>
+    <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-24px">
+        <!-- <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <i class="fa fa-snapchat w3-hover-opacity"></i>
+            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i>
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
+            <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank"
+                    class="w3-hover-text-green">w3.css</a></p> -->
+        <!-- End footer -->
+    </footer>
+
+    <!-- END PAGE CONTENT -->
+    </div>
+
+    <script>
+        // Open and close sidebar
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "60%";
+            document.getElementById("mySidebar").style.display = "block";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
