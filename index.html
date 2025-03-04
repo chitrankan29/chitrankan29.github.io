@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>W3.CSS Template</title>
+    <title>CHITRANKAN MULAM</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -26,8 +26,8 @@
         .bgimg {
             background-position: center;
             background-repeat: no-repeat;
-            background-size: calc(85%);
-            background-image: url('shared image (3).jpg');
+            background-size: cover;
+            background-image: url('Photos/Chitrankan01192.jpg');
             min-height: 100%;
         }
 
@@ -93,12 +93,12 @@
         <header class="w3-container w3-center" style="padding:128px 16px" id="home">
             <h1 class="w4-jumbo"><b>CHITRANKAN MULAM</b></h1>
             <p>ARTIST | ART/ICT TEACHER | DESIGNER | MODEL</p>
-            <img src="images/shared image (3).jpg" class="w3-image w3-hide-large w3-hide-small w3-round"
+            <img src="Photos/Chitrankan01192.jpg" class="w3-image w3-hide-large w3-hide-small w3-round"
                 style="display:block;width:60%;margin:auto;">
-            <img src="images/shared image (3).jpg" class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000"
+            <img src="Photos/Chitrankan01192.jpg" class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000"
                 height="1333">
             <button class="w3-button w3-light-grey w3-padding-large w3-margin-top">
-                <a href="Chitrankan Mulam CV 2.pdf" download="Chitrankan Mulam">
+                <a href="Chitrankan Mulam CV 2025.pdf" download="Chitrankan Mulam">
                     <i class="fa fa-download"></i> Download Resume
             </button></a>
         </header>
@@ -126,52 +126,101 @@
                     highlighting the dynamic interplay between individual expression and collaborative learning.<br>
                     (Click on the images to make them bigger)</p><br>
 
-                <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-                <div class="w3-row-padding w3-center">
-                    <div class="w3-col m6">
-                        <img src="/w3images/p1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
-                            alt="The mist over the mountains">
+                <style>
+                    .gallery {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 10px;
+                        justify-content: center;
+                    }
+                    .gallery img {
+                        width: 48%;
+                        max-width: 400px;
+                        transition: transform 0.3s ease, opacity 0.3s ease;
+                        cursor: pointer;
+                        border-radius: 8px;
+                    }
+                    .gallery img:hover {
+                        opacity: 0.8;
+                        transform: scale(1.05);
+                    }
+                    .row {
+                        display: flex;
+                        justify-content: center;
+                        gap: 10px;
+                        flex-wrap: wrap;
+                    }
+                    .row img {
+                        width: 32%;
+                        max-width: 300px;
+                    }
+                    /* Modal Styling */
+                    .modal {
+                        display: none;
+                        position: fixed;
+                        z-index: 1000;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(0, 0, 0, 0.8);
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    .modal img {
+                        max-width: 90%;
+                        max-height: 90%;
+                        border-radius: 10px;
+                    }
+                    .close {
+                        position: absolute;
+                        top: 20px;
+                        right: 30px;
+                        font-size: 30px;
+                        color: white;
+                        cursor: pointer;
+                    }
+                </style>
+            </head>
+            <body>
+            
+            <div class="w3-container w3-center">
+                <div class="gallery">
+                    <img src="Photos/Personal/P21.jpg" alt="Personal Image 1" onclick="openModal(this)">
+                    <img src="Photos/Personal/P3.jpg" alt="Personal Image 2" onclick="openModal(this)">
+                    
+                    <div class="row">  
+                        <img src="Photos/Modelling/M7.jpg" alt="The Mist" onclick="openModal(this)">
+                        <img src="Photos/Modelling/M1.jpg" alt="Bear Closeup" onclick="openModal(this)">
+                        <img src="Photos/Personal/P23.jpg" alt="Quiet Ocean" onclick="openModal(this)">
                     </div>
-
-                    <div class="w3-col m6">
-                        <img src="/w3images/p2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
-                            alt="Coffee beans">
-                    </div>
-
-                    <div class="w3-col m6">
-                        <img src="/w3images/p3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
-                            alt="Bear closeup">
-                    </div>
-
-                    <div class="w3-col m6">
-                        <img src="/w3images/p4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
-                            alt="Quiet ocean">
-                    </div>
+            
+                    <img src="Photos/Personal/P22.jpg" alt="Typewriter" onclick="openModal(this)">
+                    <img src="Photos/Personal/P24.jpg" alt="Sailing" onclick="openModal(this)">
                 </div>
-
-                <div class="w3-row-padding w3-center w3-section">
-                    <div class="w3-col m6">
-                        <img src="/w3images/p5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
-                            alt="The mist">
-                    </div>
-
-                    <div class="w3-col m6">
-                        <img src="/w3images/p6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
-                            alt="My beloved typewriter">
-                    </div>
-
-                    <div class="w3-col m6">
-                        <img src="/w3images/p7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
-                            alt="Empty ghost train">
-                    </div>
-
-                    <div class="w3-col m6">
-                        <img src="/w3images/p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
-                            alt="Sailing">
-                    </div>
-                    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">
-                        <a href="photos.html">LOAD MORE</button></a>
-                </div>
+            
+                <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">
+                    <a href="photos.html">LOAD MORE</a>
+                </button>
+            </div>
+            
+            <!-- Modal -->
+            <div id="imageModal" class="modal" onclick="closeModal()">
+                <span class="close">&times;</span>
+                <img id="modalImg">
+            </div>
+            
+            <script>
+                function openModal(imgElement) {
+                    document.getElementById("modalImg").src = imgElement.src;
+                    document.getElementById("imageModal").style.display = "flex";
+                }
+            
+                function closeModal() {
+                    document.getElementById("imageModal").style.display = "none";
+                }
+            </script>
+            
             </div>
 
             <!-- Modal for full size images on click-->
@@ -231,7 +280,7 @@
             </div>
 
             <button class="w3-button w3-light-grey w3-padding-large w3-margin-top">
-                <a href="Chitrankan Mulam CV 2.pdf" download="Chitrankan Mulam">
+                <a href="Chitrankan Mulam CV 2025.pdf" download="Chitrankan Mulam">
                     <i class="fa fa-download"></i> Download Resume
             </button></a>
 
@@ -245,27 +294,27 @@
             <!-- Testimonials -->
             <h2 class="w3-padding-24">My Reputation</h2>
             <hr>
-            <img src="/w3images/avatar_smoke.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right"
+            <img src="" alt="" class="w3-left w3-circle w3-margin-right"
                 style="width:80px">
             <p><span class="w3-large w3-text-black w3-margin-right">Priyadarshini M.</span> Art Teacher, Child
                 Psychologist.</p>
             <p>"Chitrankan is an exceptional educator who blends creativity with technology, inspiring students to
                 explore their artistic potential and express themselves with confidence."</p><br>
 
-            <img src="/w3images/bandmember.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right"
+            <img src="" alt="" class="w3-left w3-circle w3-margin-right"
                 style="width:80px">
             <p><span class="w3-large w3-text-black w3-margin-right">Ruth Mendis</span> Content Creator, Digital
                 Marketing</p>
             <p>"Thanks to your guidance, I've been able to enhance my sketching and art skills, merging my content
                 creation passion with a deeper understanding of visual storytelling."</p><br>
 
-            <img src="/w3images/avatar_g2.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right"
+            <img src="" alt="" class="w3-left w3-circle w3-margin-right"
                 style="width:80px">
             <p><span class="w3-large w3-text-black w3-margin-right">Ayaan Mehta</span> Student, Aditya Birla School</p>
             <p>"Over the past four years, I have learned and grown in art under your guidance, exploring various
                 techniques and art forms that have helped me develop my skills and creativity."</p><br>
 
-            <img src="/w3images/avatar_g2.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right"
+            <img src="" alt="" class="w3-left w3-circle w3-margin-right"
                 style="width:80px">
             <p><span class="w3-large w3-text-black w3-margin-right">Dr. Suchitra Hari</span> Bach Flower Trainer</p>
             <p>"Your expertise in design has been invaluable in bringing my brand vision to life, creating stunning
@@ -410,11 +459,14 @@
                 <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: chitrankan29@gmail.com</p>
             </div>
 
+                
+            
+
             <!-- Image of location/map -->
             <!-- <img src="/w3images/map.jpg" class="w3-image w3-greyscale" style="width:100%;margin:32px 0"> -->
 
             <p>Lets get in touch. Send me a message:</p>
-            <form action="/action_page.php" target="_blank">
+            <!-- <form action="/action_page.php" target="_blank">
                 <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name">
                 </p>
                 <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required
@@ -429,21 +481,22 @@
                         <i class="fa fa-paper-plane"></i> SEND MESSAGE
                     </button>
                 </p>
-            </form>
+            </form> -->
             <!-- End Contact Section -->
         </div>
     </div>
     <!-- Footer -->
     <hr>
     <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-24px">
-        <!-- <i class="fa fa-facebook-official w3-hover-opacity"></i>
-            <i class="fa fa-instagram w3-hover-opacity"></i>
-            <i class="fa fa-snapchat w3-hover-opacity"></i>
-            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-            <i class="fa fa-twitter w3-hover-opacity"></i>
-            <i class="fa fa-linkedin w3-hover-opacity"></i>
-            <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank"
-                    class="w3-hover-text-green">w3.css</a></p> -->
+        
+            <a href="https://www.instagram.com/chitrankan_an_artist?igsh=cWlwMnMza2RkZWFm" target="_blank">
+            <i class="fa fa-instagram w3-hover-opacity" style="margin-left: 40%; font-size: 40px;"></i></a>
+            <a href="https://wa.me/8779655647" target="_blank">
+            <i class="fa fa-whatsapp w3-hover-opacity" style="margin-left: 10px; font-size: 40px;"></i></a>
+            <i class="fa fa-pinterest-p w3-hover-opacity" style="margin-left: 10px; font-size: 40px;"></i>
+            <a href="https://www.linkedin.com/in/chitrankan-mulam-40b592110" target="_blank">
+            <i class="fa fa-linkedin w3-hover-opacity" style="margin-left: 10px; font-size: 40px;" ></i></a>
+    
         <!-- End footer -->
     </footer>
 
